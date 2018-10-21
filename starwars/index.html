@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <meta charset="UTF-8">
+  <title>STAR WARS API</title>
+
+</head>
+
+<body> 
+
+<!-- TABS -->
+<div class="tab">
+        <button class="tablinks" onclick="openTAB(event, 'Films')">Films</button>
+        <button class="tablinks" onclick="openTAB(event, 'People')">People</button>
+        <button class="tablinks" onclick="openTAB(event, 'Planets')">Planets</button>
+        <button class="tablinks" onclick="openTAB(event, 'Species')">Species</button>
+        <button class="tablinks" onclick="openTAB(event, 'Starships')">Starships</button>
+        <button class="tablinks" onclick="openTAB(event, 'Vehicles')">Vehicles</button>
+      </div>
+      
+        <div id="Films" class="tabcontent default">
+            <h3>Films</h3>
+            <table id="filmTable" class="display">
+                <thead>
+                    <th>Title</th>
+                    <th>Number of episode</th>
+                </thead>
+                <tbody>                                    
+                </tbody>
+            </table>
+        </div>
+      
+        <div id="People" class="tabcontent">
+            <h3>People</h3>            
+            <table style="width: 100% !important;" id="peopleTable" class="display">
+                    <thead>
+                        <th>Name</th>
+                        <th>Height</th>
+                        <th>Mass</th>                        
+                    </thead>
+                    <tbody>                                                 
+                    </tbody>
+            </table>
+        </div>
+      
+        <div id="Planets" class="tabcontent">
+            <h3>Planets</h3>
+            <table style="width: 100% !important;" id="planetsTable" class="display">
+                    <thead>
+                        <th>Name</th>
+                        <th>Diametr</th>
+                        <th>Climate</th>
+                    </thead>
+                    <tbody>                        
+                    </tbody>
+            </table>
+        </div>
+        <div id="Species" class="tabcontent">
+            <h3>Species</h3>
+            <table style="width: 100% !important;" id="speciesTable" class="display">
+                    <thead>
+                        <th>Name</th>
+                        <th>Classification</th>
+                        <th>Average height</th>
+                    </thead>
+                    <tbody>                       
+                    </tbody>
+            </table>
+       </div>
+       <div id="Starships" class="tabcontent">
+            <h3>Starships</h3>
+            <table style="width: 100% !important;" id="starshipsTable" class="display">
+                    <thead>
+                        <th>Name</th>
+                        <th>Model</th>
+                        <th>Cost in credits</th>
+                        <th>Length in meters</th>
+                    </thead>
+                    <tbody>                                              
+                    </tbody>
+            </table>
+        </div>
+        <div id="Vehicles" class="tabcontent">
+          <h3>Vehicles</h3>
+          <table style="width: 100% !important;" id="vechiclesTable" class="display">
+                <thead>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Cost in credits</th>
+                    <th>Length in meters</th>
+                </thead>
+                <tbody>                       
+                </tbody>
+            </table>
+        </div>        
+<!-- END -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+<script src="./js/index.js" type="text/javascript"></script>
+
+<script>
+        function openTAB(evt, name) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(name).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        </script>
+</body>
+
+</html>
