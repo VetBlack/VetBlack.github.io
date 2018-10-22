@@ -1,21 +1,41 @@
+// Global Variables
 let btn = document.querySelector('.btn');
 let login = document.querySelector('.logInput');
 let pass = document.querySelector('.pasInput');
-
-function myFunction() {
-  
-}
+let pop = document.querySelector('.popupBlock');
+let popup1 = document.getElementById("myPopup");
+let popup2 = document.getElementById("myPopup2");
 
 btn.addEventListener('click', function(){
-    if (login.value){
+    if (login.value && login.value != 1111){          
+        popup1.classList.add("show");
+        popup2.classList.add("show");
 
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-
-    }if(!login.value){
+        login.style.borderBottomColor= "red";
+        pass.style.borderBottomColor= "red";
+        setTimeout(function(){
+            popup1.classList.remove("show");
+            popup2.classList.remove("show");
+            login.style.borderBottomColor= "#2f364f";
+            pass.style.borderBottomColor= "#2f364f";    
+        }, 3000)
         
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
+    }if(!login.value){               
+        popup1.classList.add("show");
+        popup2.classList.add("show");
+
+        login.style.borderBottomColor= "red";
+        pass.style.borderBottomColor= "red";
+        setTimeout(function(){
+            popup1.classList.remove("show");
+            popup2.classList.remove("show");
+            
+            login.style.borderBottomColor= "#2f364f";
+            pass.style.borderBottomColor= "#2f364f";    
+        }, 3000)
+    }if(login.value == 1111 && pass.value == 1111){
+        login.style.borderBottomColor= "green";
+        pass.style.borderBottomColor= "green";
     }
 })
 

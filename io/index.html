@@ -26,18 +26,22 @@
 
 				<h1 class="heading1">Welcome back</h1>
 				<div class="supText">Sign in to contine to IO Technologies.</div>
-				<input class="logInput" type="text" placeholder="Username" name="user"><br>
-				<span class="popuptext" id="myPopup">A Simple Popup!</span>
+				
+				<div class="popupBlock">
+					<input class="logInput" type="text" placeholder="Username" name="user"><br>
+					<span class="popuptext" id="myPopup"> <i class="fas fa-info-circle" style="color:orangered"></i> Wrong login!</span>
+				</div>
+				<div class="popupBlock">
+					<input class="pasInput" type="password" placeholder="Password" name="password"><br>
+					<span class="popuptext2" id="myPopup2"> <i class="fas fa-info-circle" style="color:orangered"></i> Wrong password!</span>
+				</div>
+				
 
-				<input class="pasInput" type="password" placeholder="Password" name="password"><br>
-				<!-- <span class="popuptext" id="myPopup">A Simple Popup!</span>	 -->
 
 				<a class="btn" type="submit">Log in <i class="fas fa-arrow-right"></i></a>
 				<div class="supText">Forgot your password? <a href="#" class="reset">Reset</a></div>
 
-				<div class="popup" onclick="myFunction()">Click me to toggle the popup!
-					<span class="popuptext" id="myPopup">A Simple Popup!</span>
-				</div>
+			
 
 			</div>
 		</div>
